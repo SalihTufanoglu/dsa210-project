@@ -6,8 +6,7 @@
 
 
 ## Project Background
-Worries regarding the potential impacts of extended screen exposure on mental wellbeing have emerged due to our dramatic rise in dependence on smartphones in today’s digital age. This project examines the connection between everyday screen time and individually reported stress and mood changes. The study explores if increased screen usage correlates with elevated stress and a decrease in overall mood satisfaction by integrating data collected from Apple Screen Time alongside mood and stress records from applications such as Daylio and Moodnotes.
-
+Worries regarding the potential impacts of extended screen exposure on mental wellbeing have emerged due to our dramatic rise in dependence on smartphones in today’s digital age. This project examines the connection between everyday screen time and individually reported stress and mood changes. The research investigates whether spending more time on screens is linked to heightened stress levels and lower overall mood contentment by combining data obtained from Apple Screen Time with mood and stress information from apps like Daylio and Moodnotes.
 
 ## Project Objectives
 - *Analyze Daily Screen Time:
@@ -20,26 +19,32 @@ Worries regarding the potential impacts of extended screen exposure on mental we
 - **Examine Relationships:
   Determine the correlation between excessive screen time and elevated stress, as well as its potential impact on overall mood.
   
-- **Develop Actionable Insights:
-  Based on the analysis, offer data-driven recommendations to help optimize screen time usage and improve mental well-being.
+- Generate Practical Recommendations:
+  Utilize the findings to present evidence-based suggestions aimed at enhancing screen time management and fostering better mental health.
 
 
 ## Data Sources
+
 1. *Screen Time Data:
+
    - *Source:
-     - Apple Screen Time application  
+     - Apple Screen Time application
+
    - *Metrics Collected:
      - Total daily screen time
      - Breakdown of usage by app or category
       
 
 2. *Stress and Mood Data:
+
    - *Sources:
+
      - *Daylio: Provides daily logs of mood and stress levels, usually recorded on a numerical scale.
      - *Moodnotes: Provides more information on mood monitoring and personal evaluation, classifying mood into positive, neutral, or negative categories.
 
 
 ## Hypothesis
+
 *Hypothesis: 
 "Excessive smartphone screen time is associated with increased stress levels and a deterioration in overall mood."  
 
@@ -47,7 +52,9 @@ This theory suggests that as individuals devote more time to their smartphones, 
 
 
 ## Data Collection and Preparation
+
 ### Data Collection
+
 - *Screen Time Data:
   Daily reports are exported from the Apple Screen Time app. These reports provide quantitative measures of smartphone usage in CSV format.
   
@@ -59,6 +66,7 @@ This theory suggests that as individuals devote more time to their smartphones, 
 
 
 ### Data Preparation
+
 - *Cleaning and Standardization:
   - Convert date and time information into a consistent format (e.g., YYYY-MM-DD).  
   - Identify and handle missing or inconsistent entries.  
@@ -72,13 +80,15 @@ This theory suggests that as individuals devote more time to their smartphones, 
   Ensure that the merged dataset is chronologically ordered, allowing for seamless analysis of trends over time.
 
 ## Exploratory Data Analysis (EDA)
+
 ### Descriptive Statistics
+
 - *Screen Time Metrics:
-  - Compute mean, median, standard deviation, and range of daily screen time.
+  - Compute mean, median and range of daily screen time.
   
 - *Psychological Metrics:
   - Calculate the average stress level and distribution of mood ratings.  
-  - Compare variations in stress and mood between days of high versus low screen time.
+  - Compare variations in stress and mood between days with high and low screen time.
 
 ### Visualization Techniques
 - **Trend Analysis:
