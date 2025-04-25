@@ -235,7 +235,7 @@ Stress and mood scores on days with high and low screen time do not significantl
 
 ---
 
-### Limitations and Future Work
+### Shortages and Future Work
 
 - Only 46 days are included in the dataset, which restricts more extensive generalization.
 - Subjective bias may be introduced by self-reported stress and mood levels.
