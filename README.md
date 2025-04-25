@@ -144,3 +144,104 @@ This theory suggests that as individuals devote more time to their smartphones, 
 
 ## Conclusion
 This initiative examines the possible adverse effects of excessive smartphone usage on mental health. By employing comprehensive data gathering, thorough cleansing and organization, initial analysis, and statistical evaluation, the research seeks to confirm the theory that greater screen time is linked to elevated stress and diminished mood. The findings from this examination will inform suggestions for more beneficial digital practices and enhance the overall comprehension of digital well-being.
+
+
+---
+---
+---
+---
+
+
+## 18 April Submission
+
+### Data Collection and Cleaning
+
+Self-reported logs from Daylio and Moodnotes (for stress and mood assessments) and personal smartphone records from Apple Screen Time (for screen usage metrics) were used to gather the data. 
+
+The dataset was cleaned by:
+
+- Rounding stress and mood scores to the closest decimal place for clarity, removing entries that are missing or contradictory, and combining entries based on dates that match are all part of standardizing the date format (YYYY-MM-DD).
+
+An excerpt of the dataset structure:
+
+| Date       | Total_Screen_Minutes | Unlocks | Stress_Score | Mood_Score | Mood_Category |
+|------------|----------------------|---------|--------------|------------|---------------|
+| 2025-03-01 | 269.9                 | 73      | 4.4          | 3.8        | Positive      |
+| 2025-03-02 | 244.5                 | 96      | 5.0          | 2.3        | Negative      |
+| 2025-03-03 | 275.9                 | 85      | 4.9          | 3.4        | Neutral       |
+
+**Full dataset available at:** `screen_time_mood_data.xlsx`
+
+---
+
+### Exploratory Data Analysis (EDA)
+
+The average person spends **241 minutes** a day in front of a screen.
+On average, there are **81 times** unlocks per day.
+The average mood score is **3.30/5**, and the average stress score is **5.38/10**.
+The average day has **215 to 262 minutes** of screen time.
+There are no extreme outliers in the distributions of stress and mood.
+
+**Visualization techniques** (histograms, line plots) were used to explore:
+- Distribution of screen time, stress, and mood
+- Time series trends for screen time and stress across the period
+
+---
+
+### Correlation Analysis
+
+The Pearson correlation coefficients between key variables are:
+
+| Variable Pair              | Correlation |
+|:----------------------------|:------------|
+| Total Screen Time vs Stress | -0.26        |
+| Total Screen Time vs Mood   | -0.09        |
+| Stress vs Mood              | -0.08        |
+
+**Interpretation:**  
+These values suggest weak and slightly negative correlations, indicating no strong linear relationship between screen time and stress or mood.
+
+---
+
+### Hypothesis Testing
+
+#### Hypotheses:
+
+**Stress Score:**
+- **Null Hypothesis (H₀):** Days with high screen time (>240 minutes) and days with low screen time (≤240 minutes) do not significantly differ in terms of stress levels.
+- **Alternative Hypothesis (H₁):** There is a significant difference in stress levels between days with high and low screen time.
+
+**Mood Score:**
+- **Null Hypothesis (H₀):** Days with high screen time (>240 minutes) and days with low screen time (≤240 minutes) do not significantly differ in mood scores.
+- **Alternative Hypothesis (H₁):** There is a significant difference in mood scores between days with high and low screen time.
+
+#### T-test Results:
+
+| Metric         | t-statistic | p-value | Conclusion |
+|:---------------|:------------|:--------|:-----------|
+| Stress Score   | -0.802       | 0.4277  | Fail to reject H₀ – No statistically significant difference |
+| Mood Score     | -1.035       | 0.3061  | Fail to reject H₀ – No statistically significant difference |
+
+**Interpretation:**  
+Stress and mood scores on days with high and low screen time do not significantly differ, according to the statistical tests.
+
+---
+
+### Findings
+
+- There is no strong linear correlation between screen time and stress or mood levels.
+- There is no statistically significant differences found according to t-tests.
+- Screen usage appears relatively stable across different mood and stress states.
+
+---
+
+### Limitations and Future Work
+
+- Only 46 days are included in the dataset, which restricts more extensive generalization.
+- Subjective bias may be introduced by self-reported stress and mood levels.
+- Next actions:
+ To predict stress and mood, use machine learning models like regression and random forest.
+ Add more individuals to the dataset.
+ Include a comparison of app categories, such as social media versus productivity apps.
+
+---
